@@ -1,0 +1,18 @@
+<h3>저녁 메뉴는?</h3>
+<h4>이름 : {{name}}</h4>
+<h4>랜덤 : {{pick.name}}</h4>
+
+<h2>메뉴 리스트</h2>
+<ul>
+    {% for menu in menus %}
+    <li> {{menu.name}} {{menu.price}} </li>
+    {% endfor %}
+</ul>
+
+{% if pick.price > 15000 %}
+<p> 비쌈 </p>
+{% elif pick.price > 10000 %}
+<p> 보통 </p>
+{% else %}
+<p> 싸다 </p>
+{% endif %}
