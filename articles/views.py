@@ -23,3 +23,16 @@ def dinner(request, name):
         'menus' : menus,
     }
     return render(request, 'dinner.html', context)
+
+
+def review(request):
+    return render(request, 'review.html')
+
+
+def create_review(request):
+    content = request.POST.get('content')
+    print(request.POST)
+    context = {
+        'content' : content,
+    }
+    return render(request, 'review_result.html', context)
