@@ -1,3 +1,5 @@
+<!-- 상속을 이용해 : 페이지를 쪼개서 유용하게 사용할 수 있음 -->
+{% extends 'base.html' %} {% block content %}  
 <h3>저녁 메뉴는?</h3>
 <h4>이름 : {{name}}</h4>
 <h4>랜덤 : {{pick.name}}</h4>
@@ -15,4 +17,4 @@
 <p> 보통 </p>
 {% else %}
 <p> 싸다 </p>
-{% endif %}
+{% endif %} {% endblock %}
