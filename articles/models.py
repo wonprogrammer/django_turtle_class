@@ -6,7 +6,7 @@ from django.db import models
 
 # Create your models here.
 
-class Articles(models.Model):  # 상속
+class Article(models.Model):  # 상속
     # id는 자동으로 만들어짐
     title = models.CharField(max_length=10)
     content = models.TextField()
